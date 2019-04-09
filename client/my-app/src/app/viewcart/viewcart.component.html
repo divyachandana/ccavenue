@@ -1,0 +1,12 @@
+
+    <h3>Click Here! to go CCAvenue</h3>
+    <button mat-button (click)="checkout()">Checkout Payment Gateway</button>
+
+  <form #form ngNoForm
+  id="nonseamless" 
+  method="post" 
+  name="redirect" 
+  action="https://test.ccavenue.com/transaction/transaction.do?command=initiateTransaction">
+    <input type="hidden" id="encRequest" name="encRequest" value="{{encRequestRes}}">
+    <input type="hidden" name="access_code" id="access_code" value="{{accessCode}}">
+</form>
